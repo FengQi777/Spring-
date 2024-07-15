@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 import com.example.demo.TacoOrder;
-import com.example.demo.User;
+import com.example.demo.Users;
 import com.example.demo.data.OrderRepository;
 
 import jakarta.validation.Valid;
@@ -34,7 +34,7 @@ public class OrderController {
   public String processOrder(
           @Valid TacoOrder order,Errors errors,
           SessionStatus sessionStatus,
-          @AuthenticationPrincipal User user) {
+          @AuthenticationPrincipal Users user) {
     if (errors.hasErrors()) {
       return "orderForm";
     }

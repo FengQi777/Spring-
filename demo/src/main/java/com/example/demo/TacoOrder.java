@@ -58,7 +58,7 @@ public class TacoOrder implements Serializable{
   private List<Taco> tacos = new ArrayList<>();
 
   @ManyToOne
-  private User user;
+  private Users user;
 
 
   public void addTaco(Taco taco) {

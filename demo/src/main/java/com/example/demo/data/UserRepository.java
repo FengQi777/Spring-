@@ -1,10 +1,10 @@
 package com.example.demo.data;
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.demo.User;
+import com.example.demo.Users;
 
-public interface UserRepository extends CrudRepository<User, Long> {
+public interface UserRepository extends CrudRepository<Users , Long> {
 
-  User findByUsername(String username);
+  Users findByUsername(String username);
 
 }
